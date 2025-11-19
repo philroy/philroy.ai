@@ -129,4 +129,25 @@ body {
   height: 100%;
   pointer-events: none;
 }
+.teddy {
+  width: 180px;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.3));
+  animation: float 4s ease-in-out infinite;
+  cursor: pointer;
+  transform-origin: center center;
+}
+
+.teddy.wave {
+  animation: wave 0.6s ease-in-out 0s 1,
+             float 4s ease-in-out infinite 0.6s;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(14deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(14deg); }
+  100% { transform: rotate(0deg); }
+}
+
 
