@@ -1,0 +1,10 @@
+{
+  "name": "mc-dashboard-api",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "latest",
+    "jsonwebtoken": "latest",
+    "rcon-client": "latest",
+    "cors": "latest"
+  }
+}
