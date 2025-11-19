@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background: #181818;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #242424;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 50px;
+  opacity: 0.5;
+}
