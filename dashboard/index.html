@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Minecraft Server Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Minecraft Control Panel</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🛡 Minecraft Server Dashboard</h1>
 
-    <div class="card">
-      <h2>Server Status</h2>
-      <p id="status">Checking...</p>
-    </div>
+<div class="nav">
+  <h2>Minecraft Dashboard</h2>
+  <a href="login.html" class="btn">Admin Login</a>
+</div>
 
-    <div class="card">
-      <h2>Player Count</h2>
-      <p id="players">Loading...</p>
-    </div>
+<div class="container">
 
-    <div class="card">
-      <h2>Server IP</h2>
-      <p>play.yourdomain.com</p>
-    </div>
-
-    <footer>
-      <p>Secure HTTPS Dashboard — Powered by GitHub Pages</p>
-    </footer>
+  <div class="card">
+    <h3>Server Status</h3>
+    <p id="status">Checking...</p>
   </div>
 
-  <script src="dashboard.js"></script>
+  <div class="card">
+    <h3>Online Players</h3>
+    <div id="playerList" class="players"></div>
+  </div>
+
+  <div class="card">
+    <h3>Server IP</h3>
+    <p>play.yourdomain.com</p>
+  </div>
+
+</div>
+
+<script src="dashboard.js"></script>
 </body>
 </html>
