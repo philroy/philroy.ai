@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>philroy.ai — Dice of Destiny 🎲</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #171717, #222, #111);
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+        animation: bgmove 12s infinite alternate ease-in-out;
+    }
+
+    @keyframes bgmove {
+        from { background-position: 0% 0%; }
+        to { background-position: 100% 100%; }
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-weight: 400;
+        opacity: 0.8;
+        margin-bottom: 40px;
+    }
+
+    #die-box {
+        width: 200px;
+        height: 200px;
+        background: #ff2b66;
+        margin: 0 auto;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 0 0 25px rgba(255, 0, 90, 0.7);
+    }
+
+    #die-box:hover {
+        transform: scale(1.07);
+    }
+
+    .roll {
+        animation: spin 0.4s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    #outcome {
+        margin-top: 30px;
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: 100px;
+        opacity: 0.5;
+        font-size: 0.9rem;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>🎲 Dice of Destiny</h1>
+<h2>Click the cube & accept your fate, mortal.</h2>
+
+<div id="die-box">🎲</div>
+
+<div id="outcome"></div>
+
+<footer>philroy.ai © 2025 — powered by chaos and dice</footer>
+
+<script>
+    const dieBox = document.getElementById("die-box");
+    const outcome = document.getElementById("outcome");
+
+    const funnyLines = [
+        "You rolled like a champion.",
+        "Luck? Skill? Rigged? You decide.",
+        "Bro thinks he's in Vegas.",
+        "The dice gods approve.",
+        "Nice roll. Loser.",
+        "Certified RNG moment."
+    ];
+
+    dieBox.addEventListener("click", () => {
+        dieBox.classList.add("roll");
+        outcome.textContent = "";
+
+        setTimeout(() => {
+            dieBox.classList.remove("roll");
+
+            const roll = Math.floor(Math.random() * 6) + 1;
+            dieBox.textContent = roll;
+
+            const quip = funnyLines[Math.floor(Math.random() * funnyLines.length)];
+
+            outcome.textContent = `You rolled a ${roll}. ${quip}`;
+        }, 800);
+    });
+</script>
+
+</body>
+</html>
